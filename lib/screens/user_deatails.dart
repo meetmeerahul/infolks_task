@@ -50,8 +50,10 @@ class _UserInfoState extends State<UserInfo> {
 
     for (var user in users) {
       if (user.name == username) {
-        name = user.name;
-        mobile = user.mobile;
+        setState(() {
+          name = user.name;
+          mobile = user.mobile;
+        });
       }
     }
   }

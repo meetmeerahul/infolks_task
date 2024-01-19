@@ -24,13 +24,19 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-            image: AssetImage("assets/1.png"),
-          )
-        ],
+      body: Center(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 50,
+            ),
+            CircleAvatar(
+              radius: 150,
+              backgroundImage: AssetImage("assets/1.png"),
+            )
+          ],
+        ),
       ),
     );
   }
